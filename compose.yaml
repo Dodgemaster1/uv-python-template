@@ -1,0 +1,14 @@
+services:
+  app:
+    build: src/config
+
+    develop:
+      watch:
+        - action: sync
+          path: src/config
+          target: /app
+          ignore:
+            - .venv/
+
+        - action: rebuild
+          path: ./uv.lock

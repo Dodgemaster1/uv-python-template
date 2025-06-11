@@ -1,0 +1,87 @@
+[project]
+name = "pythontemplate"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.11.5",
+    "pydantic-settings>=2.9.1",
+    "telethon>=1.40.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.16.0",
+    "pytest>=8.4.0",
+    "pytest-randomly>=3.16.0",
+    "pytest-xdist>=3.7.0",
+    "ruff>=0.11.13",
+    "rust-just>=1.40.0",
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = [
+    "FAST", # fastapi
+    "YTT",  # flake8-2020
+    "ANN",  # flake8-annotations
+    "ASYNC",  # flake8-async
+    "S",  # flake8-bandit
+    "FBT",  # flake8-boolean-trap
+    "B",  # flake8-bugbear
+    "A",  # flake8-builtins
+    "COM",  # flake8-commas
+    "C4",  # flake8-comprehensions
+    "EM",  # flake8-errmsg
+    "EXE",  # flake8-executable
+    "INT",  # flake8-gettext
+    "ISC",  # flake8-implicit-str-concat
+    "ICN",  # flake8-import-conventions
+    "LOG",  # flake8-logging
+    "G",  # flake8-logging-format
+    "INP",  # flake8-no-pep420
+    "PIE",  # flake8-pie
+    "PT",  # flake8-pytest-style
+    "Q",  # flake8-quotes
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "TC",  # flake8-type-checking
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "FLY",  # flynt
+    "I",  # isort
+    "C90",  # mccabe
+    "N",  # pep8-naming
+    "PERF",  # perflint
+    "E",  # errors
+    "W",  # warnings
+    "F",  # pyflakes
+    "PGH",  # pygrep-hooks
+    "PL",   # pylint
+    "PLE",  # error
+    "PLR",  # refactor
+    "PLW",  # warning
+    "UP",  # pyupgrade
+    "FURB",  # refurb
+    "RUF",  # Ruff-specific rules
+    "TRY",  # tryceratops
+]
+ignore = [
+    "ANN401",  # any-type
+    "COM812",  # warning
+    "S101",  # assert-used
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
