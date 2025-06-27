@@ -6,7 +6,6 @@ requires-python = ">=3.13"
 dependencies = [
     "pydantic>=2.11.5",
     "pydantic-settings>=2.9.1",
-    "telethon>=1.40.0",
 ]
 
 [dependency-groups]
@@ -40,6 +39,7 @@ extend-select = [
     "A",  # flake8-builtins
     "COM",  # flake8-commas
     "C4",  # flake8-comprehensions
+    "DTZ",  # flake8-datetimez
     "EM",  # flake8-errmsg
     "EXE",  # flake8-executable
     "INT",  # flake8-gettext
@@ -61,6 +61,8 @@ extend-select = [
     "FLY",  # flynt
     "I",  # isort
     "C90",  # mccabe
+    "NPY",  # numpy-specific rules
+    "PD",  # pandas-vet
     "N",  # pep8-naming
     "PERF",  # perflint
     "E",  # errors
