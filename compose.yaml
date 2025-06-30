@@ -1,6 +1,6 @@
 services:
   app:
-    build: src/config
+    build: .
 
     develop:
       watch:
