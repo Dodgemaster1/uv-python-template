@@ -8,4 +8,4 @@ mypy:
     uv run mypy src tests
 
 test:
-    uv run pytest -n 12 -v -s
+    uv run pytest -v -s
