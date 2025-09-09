@@ -1,8 +1,9 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 ruff:
-    uv run ruff format src pyproject.toml tests
-    uv run ruff check src pyproject.toml tests --fix
+    uv run ruff check src pyproject.toml tests --fix --preview
+    uv run ruff format src pyproject.toml tests --preview
+
 
 mypy:
     uv run mypy src tests
