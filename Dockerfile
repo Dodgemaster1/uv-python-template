@@ -3,11 +3,9 @@ FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 WORKDIR /app
 
 ENV UV_COMPILE_BYTECODE=1
-
 ENV UV_LINK_MODE=copy
-
-COPY ./.python-version python-version
-RUN uv python install
+ENV UV_PYTHON=python3.13
+ENV UV_PYTHON_DOWNLOADs=never
 
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
