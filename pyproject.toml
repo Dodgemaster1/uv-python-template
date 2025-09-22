@@ -4,18 +4,19 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
-    "pydantic>=2.11.7",
+    "pydantic>=2.11.9",
     "pydantic-settings>=2.10.1",
+    "ruff>=0.13.1",
 ]
 
 [dependency-groups]
 dev = [
-    "mypy>=1.17.1",
+    "mypy>=1.18.2",
     "pytest>=8.4.2",
-    "pytest-randomly>=3.16.0",
+    "pytest-randomly>=4.0.1",
     "pytest-sugar>=1.1.1",
     "pytest-xdist>=3.8.0",
-    "ruff>=0.12.12",
+    "ruff>=0.13.1",
     "rust-just>=1.42.4",
 ]
 
