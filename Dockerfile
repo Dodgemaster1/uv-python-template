@@ -5,7 +5,7 @@ WORKDIR /app
 ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 ENV UV_PYTHON=python3.13
-ENV UV_PYTHON_DOWNLOADs=never
+ENV UV_PYTHON_DOWNLOADS=never
 
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
