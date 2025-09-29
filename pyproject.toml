@@ -29,6 +29,7 @@ module-root = ""
 
 [tool.ruff]
 line-length = 120
+preview = true
 
 [tool.ruff.lint]
 extend-select = [

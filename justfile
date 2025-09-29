@@ -2,9 +2,9 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 alias l := lint
 lint:
-    uv run ruff format src pyproject.toml tests --preview
-    uv run ruff check src pyproject.toml tests --fix --preview
-    uv run ruff format src pyproject.toml tests --preview
+    uv run ruff format src pyproject.toml tests
+    uv run ruff check src pyproject.toml tests --fix
+    uv run ruff format src pyproject.toml tests
 
 alias tc := typecheck
 typecheck:
