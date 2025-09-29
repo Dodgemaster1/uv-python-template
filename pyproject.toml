@@ -43,7 +43,6 @@ extend-select = [
     "COM",  # flake8-commas
     "C4",  # flake8-comprehensions
     "DTZ",  # flake8-datetimez
-    "EM",  # flake8-errmsg
     "EXE",  # flake8-executable
     "INT",  # flake8-gettext
     "ISC",  # flake8-implicit-str-concat
@@ -84,4 +83,9 @@ ignore = [
     "ANN401",  # any-type
     "COM812",  # warning
     "S101",  # assert-used
+    "PLR6301",  # static-method
+    "FA100",
+    "TRY003",
+    "PERF203",
+    "PYI025",
 ]
